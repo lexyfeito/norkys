@@ -1,0 +1,66 @@
+
+<div class="header" fxLayout="row" fxLayoutAlign="start center">
+
+  <div fxFlex="1 1 45%" fxFlex.lt-sm="1 1 10%">
+    <div class="menu">
+      <i class="fa fa-bars" (click)="menuOpened = true"></i>
+    </div>
+
+    <ul>
+      <li>
+        <a [routerLink]="['/shop']"
+           routerLinkActive="active"
+        >Shop</a>
+      </li>
+      <li>
+        <a [routerLink]="['/about']"
+           routerLinkActive="active"
+        >About</a>
+      </li>
+      <li>
+        <a [routerLink]="['/contact']"
+           routerLinkActive="active"
+        >Contact</a>
+      </li>
+    </ul>
+  </div>
+
+  <div fxFlex="1 1 0%">
+    <h2 class="logo">Norky's</h2>
+  </div>
+
+  <div fxLayout="row"
+       fxLayoutGap="20px"
+       class="socials">
+    <a href="https://instagram.com" target="_blank">
+      <i class="fa fa-instagram"></i>
+    </a>
+
+    <a href="https://twitter.com" target="_blank">
+      <i class="fa fa-twitter"></i>
+    </a>
+
+    <a [routerLink]="['/cart']">
+      <i class="fa fa-shopping-bag" [attr.data-cart-length]="cart?.length"></i>
+    </a>
+  </div>
+</div>
+
+<div class="popup-navigation" fxLayout="column" *ngIf="menuOpened">
+  <div class="popup-navigation-close-button">
+    <i class="fa fa-window-close-o" (click)="menuOpened = false"></i>
+  </div>
+  <div class="popup-navigation-menu" fxFlex="1 1 0%" fxLayoutAlign="center center">
+    <ul>
+      <li>
+        <a [routerLink]="['/shop']" (click)="menuOpened = false">Shop</a>
+      </li>
+      <li>
+        <a [routerLink]="['/about']" (click)="menuOpened = false">About</a>
+      </li>
+      <li>
+        <a [routerLink]="['/contact']" (click)="menuOpened = false">Contact</a>
+      </li>
+    </ul>
+  </div>
+</div>

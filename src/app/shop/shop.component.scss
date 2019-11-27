@@ -1,0 +1,19 @@
+.categories-header {
+  text-align: center;
+  line-height: 12;
+
+  ul {
+    li {
+      display: inline;
+      margin: 0 20px;
+
+      a {
+        opacity: .4;
+      }
+
+      a.selected {
+        opacity: 1;
+      }
+    }
+  }
+}

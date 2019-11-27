@@ -1,0 +1,33 @@
+<div class="categories-header">
+
+  <ul>
+<!--    <li>-->
+<!--      <a [routerLink]="['/shop']"-->
+<!--         [ngClass]="{'selected': !selectedCategory}"-->
+<!--      >-->
+<!--        {{ 'All' | uppercase }}-->
+<!--      </a>-->
+<!--    </li>-->
+    <li *ngFor="let category of categories | async">
+      <a [routerLink]="['/shop']"
+         [queryParams]="{'category': category?.category_data?.name}"
+         [ngClass]="{'selected': selectedCategory === category?.category_data?.name}">
+        {{ category?.category_data?.name | uppercase }}
+      </a>
+    </li>
+  </ul>
+
+</div>
+
+<div fxLayout="row"
+     fxLayout.sm="column"
+     fxLayout.xs="column"
+     fxLayoutGap="10px"
+     fxLayoutGap.sm="10px"
+     fxLayoutGap.xs="10px">
+  <div *ngFor="let item of items | async"
+       fxLayoutAlign="center center"
+       fxFlex="1 1 33%">
+    <app-shop-item [item]="item"></app-shop-item>
+  </div>
+</div>

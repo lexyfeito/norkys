@@ -1,0 +1,14 @@
+.item {
+  .item-inner {
+    img {
+      width: 100%;
+    }
+    .item-description {
+      line-height: 2;
+      font-weight: 500;
+    }
+    .item-price {
+      font-size: 14px;
+    }
+  }
+}

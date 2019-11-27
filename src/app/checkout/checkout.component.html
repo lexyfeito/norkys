@@ -1,0 +1,127 @@
+<div class="checkout-header">
+  <h1>
+    <a [routerLink]="['/shop']">Norky's</a>
+  </h1>
+</div>
+
+<div fxLayout="row" fxLayoutAlign="center start" fxLayoutGap="25px">
+  <div fxLayout="column" fxFlex="1 1 30%" fxLayoutGap="20px">
+    <div class="card" fxLayout="column">
+      <h1 class="card-header">1. Your Email</h1>
+
+      <br />
+
+      <div class="form-control bordered">
+        <input type="email" placeholder="Email" />
+        <small class="control-hint">You'll receive receipts and notifications at this email address.</small>
+      </div>
+
+      <br />
+
+      <button class="bordered">Continue</button>
+    </div>
+
+    <div class="card">
+      <h1 class="card-header">2. Shipping</h1>
+
+      <br />
+
+      <div fxLayout="column" fxLayoutGap="10px">
+        <div fxLayout="row" fxLayoutGap="5px">
+          <div class="form-control bordered">
+            <input placeholder="First Name" />
+          </div>
+
+          <div class="form-control bordered">
+            <input placeholder="Last Name" />
+          </div>
+        </div>
+
+        <div class="form-control bordered">
+          <input placeholder="Address 1" />
+        </div>
+
+        <div fxLayout="row" fxLayoutGap="5px">
+          <div class="form-control bordered">
+            <input placeholder="ZIP Code" />
+          </div>
+
+          <div class="form-control bordered">
+            <input placeholder="City" />
+          </div>
+
+          <div class="form-control bordered">
+            <input placeholder="State" />
+          </div>
+        </div>
+
+        <div class="form-control bordered">
+          <input placeholder="Phone Number" />
+        </div>
+
+        <button class="bordered">Continue</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h1 class="card-header">3. Payment</h1>
+
+      <br />
+
+      <div id="form-container" fxLayout="column" fxLayoutGap="10px">
+        <div id="sq-card-number" class="form-control"></div>
+        <div id="sq-expiration-date" class="form-control"></div>
+        <div id="sq-cvv" class="form-control"></div>
+        <div id="sq-postal-code" class="form-control"></div>
+        <button id="sq-creditcard" class="bordered" (click)="pay()">Pay</button>
+      </div>
+    </div>
+
+    <div class="card disabled">
+      <h1 class="card-header">4. Review & Purchase</h1>
+    </div>
+  </div>
+
+  <div class="card">
+    <h1 class="card-header">Order Summary</h1>
+
+    <br />
+
+    <div class="order-summary" fxLayout="column">
+      <div fxLayout="row">
+        <div>
+          <img src="assets/categories/_1.jpg">
+        </div>
+        <div>
+          <p>Demo bathing suit</p>
+          <small>Size: 4</small>
+        </div>
+
+        <div>
+          <p>$50.00</p>
+          <div>
+            <input>
+          </div>
+          <button>delete</button>
+        </div>
+      </div>
+
+      <div fxLayout="row">
+        <div fxFlex="1 1 0%">
+          <p>Subtotal</p>
+          <p>Tax</p>
+          <p>Shipping</p>
+          <p>Total</p>
+        </div>
+        <div>
+          <p>$50.00</p>
+          <p>$0.00</p>
+          <p>$0.00</p>
+          <p>$50.00</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br />
+</div>

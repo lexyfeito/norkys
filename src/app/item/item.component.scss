@@ -1,0 +1,28 @@
+.item-header {
+  line-height: 10;
+
+  i {
+    font-size: 10px;
+  }
+}
+
+.item-information {
+  .item-title {
+    font-weight: 500;
+    line-height: 2;
+  }
+
+  .item-price {
+    line-height: 3;
+    color: #a8a6a1;
+  }
+
+  .item-description {
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: 0em;
+    text-transform: none;
+    line-height: 1.8em;
+    font-size: 1rem;
+  }
+}

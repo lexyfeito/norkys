@@ -1,0 +1,54 @@
+<div class="item-header"
+     fxLayout="row"
+     fxLayoutAlign="start center"
+     fxLayoutGap="20px">
+  <a [routerLink]="['/shop']">Shop</a>
+  <i class="fa fa-chevron-right"></i>
+  <label>Demo Bathing Suit</label>
+</div>
+
+<div fxLayout="row" fxLayout.lt-sm="column">
+
+  <div fxFlex="1 1 50%" fxLayout="row" fxLayoutAlign="center start" class="item-image">
+    <img *ngIf="imageUrl" [src]="imageUrl">
+  </div>
+
+  <div fxFlex="1 1 50%" class="item-information">
+    <h1 class="item-title">{{ item?.name }}</h1>
+    <label class="item-price">
+      {{ item?.amount | currency }}
+    </label>
+    <p class="item-description">
+      {{ item?.description }}
+    </p>
+
+    <br />
+
+    <form fxLayout="column" [formGroup]="order">
+
+      <div class="form-control">
+        <label>Select size: </label>
+        <select placeholder="Select size" formControlName="size">
+          <option value="sm">Small</option>
+          <option value="md">Medium</option>
+          <option value="lg">Large</option>
+        </select>
+      </div>
+
+      <br />
+
+      <div class="form-control">
+        <label>Quantity</label>
+        <input type="number" formControlName="qty" />
+      </div>
+
+      <br />
+
+      <button (click)="addToCart()">Add to Cart</button>
+
+      <br />
+
+    </form>
+  </div>
+
+</div>

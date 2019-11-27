@@ -1,0 +1,13 @@
+.body-section {
+  padding: 0 50px;
+}
+
+.footer {
+  margin: 80px 0;
+}
+
+@media (max-width: 600px) {
+  .body-section {
+    padding: 0 20px;
+  }
+}

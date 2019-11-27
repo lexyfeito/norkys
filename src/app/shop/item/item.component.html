@@ -1,0 +1,15 @@
+<div class="item">
+  <a class="item-inner" [routerLink]="['/item', item?.id]">
+    <div *ngIf="imageUrl">
+      <img [src]="imageUrl">
+    </div>
+    <div>
+      <h2 class="item-description">
+        {{ item?.name }}
+      </h2>
+      <label class="item-price">
+        {{ item?.amount | currency }}
+      </label>
+    </div>
+  </a>
+</div>

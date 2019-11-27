@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+@import "scss/form";
+@import "scss/layout";
+html, body, h1, h2, h3, h4, h5, h6, ul, li, p, label {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+* {
+  font-family: sans-serif;
+}
+html, body {
+  height: 100%;
+}

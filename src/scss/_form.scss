@@ -1,0 +1,76 @@
+.form-control {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    line-height: 2;
+  }
+
+  select, input, textarea {
+    padding: 20px 10px;
+    font-size: 16px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  input {
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  &.bordered {
+    select, input, textarea {
+      padding: 11px;
+      border: 1px solid #ebebeb;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+  }
+
+  .control-hint {
+    color: #a1a1a1;
+    font-size: 12px;
+    line-height: 16px;
+    margin: 5.5px 0;
+  }
+}
+
+button {
+  padding: 20px;
+  background-color: #272727;
+  border: 0;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+
+  &.bordered {
+    border-radius: 3px;
+    padding: 11px;
+    font-weight: normal;
+  }
+
+  &:hover {
+    opacity: .8;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+/* Define how SqPaymentForm iframes should look */
+.sq-input {
+  border: 1px solid #ebebeb;
+  border-radius: 4px;
+}
+
+/* Define how SqPaymentForm iframes should look when they have focus */
+.sq-input--focus {
+}
+
+/* Define how SqPaymentForm iframes should look when they contain invalid values */
+.sq-input--error {
+}

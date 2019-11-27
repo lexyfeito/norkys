@@ -1,0 +1,25 @@
+<div class="cart">
+
+  <h2>SHOPPING CART</h2>
+
+  <div class="cart-table">
+    <div class="cart-table-header" fxLayout="row" fxLayoutGap="20px">
+      <label fxFlex="1 1 80%">ITEM</label>
+      <label fxFlex="1 1 10%">QTY.</label>
+      <label fxFlex="1 1 10%">PRICE</label>
+    </div>
+
+    <app-cart-item-row *ngFor="let item of cart | async" [item]="item"></app-cart-item-row>
+
+  </div>
+
+  <div class="subtotal">
+    <label>Subtotal {{ 50 | currency }}</label>
+  </div>
+
+  <div fxLayout.gt-xs="row"
+       fxLayoutAlign.gt-xs="end start"
+       fxLayout.lt-sm="column">
+    <button [routerLink]="['/checkout']">CHECKOUT</button>
+  </div>
+</div>
